@@ -1,0 +1,24 @@
+/* style.css */
+.autocomplete-container {
+  position: relative;
+  width: 300px;
+}
+
+.autocomplete-results {
+  position: absolute;
+  border: 1px solid #ddd;
+  border-top: none;
+  max-height: 200px;
+  overflow-y: auto;
+  width: 100%;
+  background: white;
+}
+
+.autocomplete-results div {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.autocomplete-results div:hover {
+  background: #f2f2f2;
+}
