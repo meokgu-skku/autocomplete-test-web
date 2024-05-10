@@ -1,4 +1,3 @@
-/* style.css */
 .autocomplete-container {
   position: relative;
   width: 300px;
@@ -17,6 +16,13 @@
 .autocomplete-results div {
   padding: 10px;
   cursor: pointer;
+  display: flex;
+  align-items: center; /* 내용을 중앙 정렬 */
+}
+
+.autocomplete-results div .category {
+  margin-left: auto; /* 오른쪽 끝에 카테고리를 배치 */
+  color: #888; /* 카테고리 색상을 회색으로 설정 */
 }
 
 .autocomplete-results div:hover {

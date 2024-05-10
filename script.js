@@ -1,4 +1,3 @@
-// script.js
 document.addEventListener('DOMContentLoaded', function() {
   var searchInput = document.getElementById('searchInput');
   var resultsContainer = document.getElementById('autocompleteResults');
@@ -9,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   function fetchAutocompleteResults(query) {
-    fetch(`http://localhost:3000/restaurant?query=${query}`)
+    fetch(`http://localhost:8090/restaurant?query=${query}`)
     .then(response => response.json())
     .then(data => displayResults(data.results))
     .catch(error => console.error('Error:', error));
@@ -19,7 +18,8 @@ document.addEventListener('DOMContentLoaded', function() {
     resultsContainer.innerHTML = '';
     results.forEach(function(item) {
       var div = document.createElement('div');
-      div.innerHTML = item.highlighted_display;
+      div.className = 'autocomplete-entry'; // Added class for styling
+      div.innerHTML = `${item.highlighted_display} <span class="category">${item.category}</span>`; // Display category
       resultsContainer.appendChild(div);
     });
   }
