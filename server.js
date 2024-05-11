@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = 81;
 
 // 정적 파일 제공을 위한 미들웨어 설정
 app.use(express.static('public'));
